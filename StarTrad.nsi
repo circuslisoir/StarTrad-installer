@@ -17,14 +17,11 @@
 
   ;Name and file
   Name "StarTrad"
-  OutFile "Installer.exe"
+  OutFile "StarTrad_setup_9.0-BETA.exe"
   Unicode True
 
   ;Default installation folder
   InstallDir "$LOCALAPPDATA\Startrad"
-
-  ;Get installation folder from registry if available
-  ;InstallDirRegKey HKCU "Software\Modern UI Test" ""
 
   ;Request application privileges for Windows Vista
   RequestExecutionLevel user
@@ -39,6 +36,12 @@
 
   ; !define MUI_BGCOLOR 252525
   ; !define MUI_TEXTCOLOR FFFFFF
+
+;--------------------------------
+;Options finish
+
+  !define MUI_FINISHPAGE_RUN "$LOCALAPPDATA\Startrad\StarTrad.exe"
+  !define MUI_FINISHPAGE_RUN_TEXT "Lancer StarTrad sans attendre"
 
 ;--------------------------------
 ;Pages
@@ -95,7 +98,7 @@ Section "Dummy Section" SecDummy
 	WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\StarTrad" "HelpLink"              "$\"$\""
 	WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\StarTrad" "URLUpdateInfo"         "$\"$\""
 	WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\StarTrad" "URLInfoAbout"          "$\"https://startrad.fr$\""
-	WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\StarTrad" "DisplayVersion"        "$\"1.0.0$\""
+	WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\StarTrad" "DisplayVersion"        "$\"0.9-BETA$\""
 	WriteRegDWORD HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\StarTrad" "VersionMajor"        1
 	WriteRegDWORD HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\StarTrad" "VersionMinor"        0
 	# There is no option for modifying or repairing the install
