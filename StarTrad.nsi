@@ -17,7 +17,7 @@
 
   ;Name and file
   Name "StarTrad"
-  OutFile "StarTrad_setup_9.0-BETA.exe"
+  OutFile "StarTrad_setup_0.9.1-BETA.exe"
   Unicode True
 
   ;Default installation folder
@@ -76,7 +76,7 @@ Section "Dummy Section" SecDummy
   SetOutPath "$INSTDIR"
 
   ;ADD YOUR OWN FILES HERE...
-  File "StarTrad_x64\"
+  File /r "StarTrad_x64\"
 
   ;Store installation folder
   ;WriteRegStr HKCU "Software\Modern UI Test" "" $INSTDIR
@@ -98,7 +98,7 @@ Section "Dummy Section" SecDummy
 	WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\StarTrad" "HelpLink"              "$\"$\""
 	WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\StarTrad" "URLUpdateInfo"         "$\"$\""
 	WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\StarTrad" "URLInfoAbout"          "$\"https://startrad.fr$\""
-	WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\StarTrad" "DisplayVersion"        "$\"0.9-BETA$\""
+	WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\StarTrad" "DisplayVersion"        "$\"0.9.1-BETA$\""
 	WriteRegDWORD HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\StarTrad" "VersionMajor"        1
 	WriteRegDWORD HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\StarTrad" "VersionMinor"        0
 	# There is no option for modifying or repairing the install
